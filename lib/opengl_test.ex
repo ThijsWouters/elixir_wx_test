@@ -40,7 +40,11 @@ defmodule OpenGLTest do
 
     :wxWindow.raise(frame)
 
-    :gl.color3f(1, 0, 0)
+    loop(gl, {1, 0, 0})
+  end
+
+  def loop(gl, {red, green, blue}) do
+    :gl.color3f(red, green, blue)
 
     :gl.begin(:gl_const.gl_quads)
     :gl.vertex2f(50, 50)
@@ -50,5 +54,11 @@ defmodule OpenGLTest do
     :gl.end
 
     :wxGLCanvas.swapBuffers(gl)
+    :timer.sleep(1000)
+    if red == 1 do
+      loop(gl, {0, 1, 0})
+    else
+      loop(gl, {1, 0, 0})
+    end
   end
 end
