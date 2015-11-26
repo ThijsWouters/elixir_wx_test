@@ -17,3 +17,9 @@ wx_full_repaint_on_resize() ->
 
 wx_expand() ->
   ?wxEXPAND.
+
+wx_gl_rgba() ->
+  ?WX_GL_RGBA.
+
+wx_gl_doublebuffer() ->
+  ?WX_GL_DOUBLEBUFFER.
