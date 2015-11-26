@@ -11,3 +11,9 @@ wx_vertical() ->
 
 wx_id_exit() ->
   ?wxID_EXIT.
+
+wx_full_repaint_on_resize() ->
+  ?wxFULL_REPAINT_ON_RESIZE.
+
+wx_expand() ->
+  ?wxEXPAND.
